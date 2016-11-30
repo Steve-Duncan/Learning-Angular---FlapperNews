@@ -26,7 +26,7 @@ router.post('/register', function(req, res, next){
   console.log('Trying to add:', req.body.username, 'with password:', req.body.password)
   user.save(function(err){
     if(err){ 
-      console.log('Shit! Error here.')
+      console.log('Oops! Error here.')
       return next(err); }
 
     return res.json({token: user.generateJWT()})
